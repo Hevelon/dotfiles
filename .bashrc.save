@@ -1,6 +1,6 @@
 # *********************************************
 # * ~/.bashrc Personalizado para Arch Linux *
-# * System: Arch Linux 
+# * System: Arch Linux *
 # * local: $HOME/.bashrc *
 # * Author: Halisson Hevelon *
 # * E-Mail: halisson.hevelon@gmail.com *
@@ -85,14 +85,14 @@ fi # Fim da condição if
 
 # PS1="\e[01;31m┌─[\e[01;35m\u\e[01;31m]──[\e[00;37m${HOSTNAME%%.*}\e[01;32m]:\w$\e[01;31m\n\e[01;31m└──\e[01;36m>>\e[00m"
 
-# PS1='\[\e[m\n\e[1;30m\][$:$PPID \j:\!\[\e[1;30m\]]\[\e[0;36m\] \T \d \[\e[1;30m\][\[\e[1;34m\]\u@\H\[\e[1;30m\]:\[\e[0;37m\]${SSH_TTY} \[\e[0;32m\]+${SHLVL}\[\e[1;30m\]] \[\e[1;37m\]\w\[\e[0;37m\] \n($SHLVL:\!)\$ '}
+# PS1='\[\e[m\n\e[1;30m\][$:$PPID \j:\!\[\e[1;30m\]]\[\e[0;36m\] \T \d \[\e[1;30m\][\[\e[1;34m\]\u@\H\[\e[1;30m\]:\[\e[0;37m\]${SSH_TTY} \[\e[0;32m\]+${SHLVL}\[\e[1;30m\]] 
+\[\e[1;37m\]\w\[\e[0;37m\] \n($SHLVL:\!)\$ '}
 
 # PS1="\e[01;31m┌─[\e[01;35m\u\e[01;31m]──[\e[00;37m${HOSTNAME%%.*}\e[01;32m]:\w$\e[01;31m\n\e[01;31m└──\e[01;36m>>\e[00m"
 
 # PS1="┌─[\[\e[34m\]\h\[\e[0m\]][\[\e[32m\]\w\[\e[0m\]]\n└─╼ "
 
 # PS1='[\u@\h \W]\$ '
-
 #==========================
 # DIVERSOS
 #==========================
