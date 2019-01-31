@@ -125,4 +125,4 @@ alias google='ping -c3 www.google.com.br' # Ping ao google a cada 3 segundos
 alias uol='ping -c3 www.uol.com.br' # Ping ao UOL a cada 3 segundos
 
 # Conectar Servidor Remoto Windows
-alias rpd='./dotfiles/meusScripts/rpd-comercial.sh'
+alias rpd='.config/scripts/rpd-comercial.sh'
