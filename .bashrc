@@ -1,6 +1,6 @@
 # *********************************************
 # * ~/.bashrc Personalizado para Arch Linux *
-# * System: Arch Linux 
+# * System: Arch Linux *
 # * local: $HOME/.bashrc *
 # * Author: Halisson Hevelon *
 # * E-Mail: halisson.hevelon@gmail.com *
