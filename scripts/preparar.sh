@@ -34,10 +34,9 @@ echo -e "\e[44;90m== > Olá "$USER", Os arquivos estão sendo movidos para o dir
 echo -e "\e[44;90m== > Diretório do repositório :: Acessado.\e[0m"
     cd $HOME/dotfiles ;
     git pull ;
-#    cd Configuração ;
 
-#echo -e "\e[44;90m== > Medidas protetivas :: Iniciadas.\e[0m"
-#    sudo rm -dR {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons,termite} ;
+echo -e "\e[44;90m== > Medidas protetivas :: Iniciadas.\e[0m"
+    sudo rm -dR {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons,termite} ;
 
 echo -e "\e[44;90m== > Arquivos :: Copiados.\e[0m"
     cp $HOME/.bashrc $HOME/dotfiles ;

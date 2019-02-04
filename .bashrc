@@ -9,7 +9,7 @@
 # Adaptado do original de Edinaldo P. Silva para Arch Linux
 # URL: http://gnu2all.blogspot.com.br/2011/10/arch-linux-bashrc.html
 # ======================================================================
-#
+
 #-----------------------------------------------
 # Configurações Gerais
 #-----------------------------------------------
