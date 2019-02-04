@@ -40,6 +40,7 @@ echo -e "\e[44;90m== > Diretório do repositório :: Acessado.\e[0m"
 #    sudo rm -dR {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons,termite} ;
 
 echo -e "\e[44;90m== > Arquivos :: Copiados.\e[0m"
+    cp $HOME/.bashrc $HOME/dotfiles ;
     cp -r $HOME/.config/{background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/dotfiles ;
     sudo cp -r /etc/xdg/termite $HOME/dotfiles ;
 

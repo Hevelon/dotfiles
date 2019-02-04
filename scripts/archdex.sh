@@ -32,7 +32,7 @@ echo -e "\e[44;90m== > Olá "$USER". Iniciando instalação da última versão!\
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Instalando pacotes essenciais.\e[0m"
-    sudo pacman -S --needed alsa-utils arc-gtk-theme arc-icon-theme compton dunst feh gtk-engine-murrine gtk-engines gvfs i3-gaps maim mplayer networkmanager notify-osd playerctl pulseaudio pulseaudio-alsa rofi sddm termite thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman ttf-dejavu tumbler xorg-server xorg-xinit xorg-xprop xorg-xrandr ttf-fira-sans ttf-fira-mono expac git jshon wget libcurl-gnutls ffmpeg file-roller ;
+    sudo pacman -S --needed alsa-utils arc-gtk-theme arc-icon-theme compton dunst feh gtk-engine-murrine gtk-engines gvfs i3-gaps maim mplayer networkmanager notify-osd playerctl pulseaudio pulseaudio-alsa rofi slim termite thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman ttf-dejavu tumbler xorg-server xorg-xinit xorg-xprop xorg-xrandr ttf-fira-sans ttf-fira-mono expac git jshon wget libcurl-gnutls ffmpeg file-roller ;
     echo "< ================================================================= >";
 
 if pergunta "== > INSTALAR TRIZEN? CASO NÃO O TENHA ISTALADO, INSTALE!" S; then
@@ -62,25 +62,25 @@ echo -e "\e[44;90m== > Habilitando o wireless.\e[0m"
     sudo systemctl start NetworkManager ;
     echo "< ================================================================= >";
 
-echo -e "\e[44;90m== > Habilitando o sddm.\e[0m"
-    sudo systemctl enable sddm.service ;
+echo -e "\e[44;90m== > Habilitando o slim.\e[0m"
+    sudo systemctl enable slim.service ;
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Criando diretórios básicos :: Iniciado.\e[0m"
-    mkdir $HOME/{Documentos,Downloads,Imagens,Modelos,Músicas,Público,Vídeos} ;
-    mkdir $HOME/Imagens/Screenshots ;
-    mkdir $HOME/Vídeos/Screencasts ;
+ #   mkdir $HOME/{Documentos,Downloads,Imagens,Modelos,Músicas,Público,Vídeos} ;
+    mkdir $HOME/Pictures/Screenshots ;
+    mkdir $HOME/Videos/Screencasts ;
     mkdir $HOME/.config/spotifylog ;
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Download :: Iniciado.\e[0m"
     cd ;
-    sudo rm -dR ArchDex ;
-    git clone https://github.com/jirrezdex/ArchDex.git | exit ;
+ #   sudo rm -dR dotfiles ;
+    git clone https://github.com/Hevelon/dotfiles.git | exit ;
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Diretório :: Acessado.\e[0m"
-    cd ArchDex/Configuração ;
+    cd dotfiles ;
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Permissão para scripts :: Fornecidas.\e[0m"
@@ -109,11 +109,11 @@ echo -e "\e[44;90m== > Instalação de icones :: Finalizada.\e[0m"
     cd .. ;
     echo "< ================================================================= >";
 
-echo -e "\e[44;90m== > Arquivos desnecessários :: Removidos.\e[0m"
-    cd .. ;
-    cd .. ;
-    sudo rm -dR ArchDex ;
-    echo "< ================================================================= >";
+#echo -e "\e[44;90m== > Arquivos desnecessários :: Removidos.\e[0m"
+#    cd .. ;
+#    cd .. ;
+#    sudo rm -dR ArchDex ;
+#    echo "< ================================================================= >";
 
 if pergunta "== > INICIAR REMOÇÃO DE ARQUIVOS PESSOAIS DO DESENVOLVEDOR? RECOMENDADO, PODE CAUSAR PROBELMAS EM OUTROS COMPUTADORES." S; then
     sudo rm -dR $HOME/.config/scripts/pessoal.sh ;
