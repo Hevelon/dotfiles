@@ -23,6 +23,25 @@ _isxrunning=false
 _isroot=false
 [[ $UID -eq 0 ]] && _isroot=true
 # }}}
+#=============================================
+# Configurações referentes ao usuário
+#=============================================
+
+## Verifica se é usuário root (UUID=0) ou usuário comum
+if [ $UID -eq "0" ]; then
+
+## Cores e efeitos do Usuario root
+
+PS1="$G┌─[$BR\u$G]$BY@$G[$BW${HOSTNAME%%.*}$G]$B:\w\n$G└──>$BR \\$ $NONE"
+
+else
+
+## Cores e efeitos do usuário comum
+
+PS1="$BR┌─[$BG\u$BR]$BY@$BR[$BW${HOSTNAME%%.*}$BR]$B:\w\n$BR└──>$BG \\$ $NONE"
+
+fi # Fim da condição if
+
 # PS1 CONFIG {{{
   export TERM='xterm-256color'
 
