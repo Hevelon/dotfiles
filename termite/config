@@ -1,52 +1,57 @@
-# www.jirrezdex.com
-# contato@jirrezdex.com
-# Jirrez Matheus
+# Termite configuration
+#
 
-################ Básico
 [options]
-transparency = 0.8
-font = Fira Mono 9
-use_xft = true
-allow_bold = true
+resize_grip = false
+scroll_on_output = false
+scroll_on_keystroke = true
 audible_bell = false
-clickable_url = true
+visible_bell = true
+mouse_autohide = false
+allow_bold = true
 dynamic_title = true
-icon_name = terminal
-scrollback_lines = 999999
 urgent_on_bell = true
+clickable_url = true
+scrollback_lines = 10000
+search_wrap = true
 
-################ Navegador
-browser = google-chrome-stable
-
-################ Cursor cego | system | on | off
+# "system", "on" or "off"
 cursor_blink = on
 
-################ Cursor | block | underline | ibeam
-cursor_shape = ibeam
+# "block", "underline" or "ibeam"
+cursor_shape = block
 
-################ Cores
+# emit escape sequences for other keys modified by Control
+#modify_other_keys = false
+
 [colors]
-foreground = #339AF0
-background = rgba(0, 2, 33, 0.8)
+background      = rgba(13,5,15,0.73)
+foreground      = #d8d8d8
+foreground_bold = #d8d8d8
+cursor          = #AE81FF
 
-foreground_bold = #339AF0
-cursor = #339AF0
-cursor_foreground = #339AF0
-highlight = #339AF0
 
-color0 = #2D253A
-color1 = #4968C6
-color2 = #1861B4
-color3 = #2E65BE
-color4 = #1256A4
-color5 = #134C96
-color6 = #134389
-color7 = #3E4995
-color8 = #133C7F
-color9 = #353A72
-color10 = #2D253A
-color11 = #4968C6
-color12 = #1861B4
-color13 = #2E65BE
-color14 = #1256A4
-color15 = #134C96
+#black
+color0 = #393939
+color8 = #AF875F
+#red
+color1 = #BF1E2D
+color9 = #E7212A
+#green
+color2 = #9DBA3A
+color10 = #A9C938
+#yellow
+color3 = #F5B915
+color11 = #F7D325
+#blue
+color4 = #1CA1DB
+color12 = #00AFDA
+#magenta
+color5 = #652F90
+color13 = #894E9F
+#cyan
+color6 = #EA7D24
+color14 = #F79321
+#white
+color7 = #E7E8E9
+color15 = #F3F3F4
