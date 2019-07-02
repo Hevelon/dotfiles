@@ -1,12 +1,13 @@
-# My DotFiles
+# <h1 align="center">My DotFiles</h1>
 
 
 <p align="center">
 <img align="center" src="http://efavdb.com/wp-content/uploads/2016/02/dotfiles_header-750x200.png">
 </p>
-<hr>
-
+ 
+# <p>
 Hello World!!! These are the dotfiles that I use.
+</p>
 
 ### Prerequisites
 
