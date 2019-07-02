@@ -8,7 +8,7 @@
 # ======================================================================
 # * Adaptado do original de Jirrez Matheus
 # * URL: www.jirrezdex.com
-# * contato@jirrezdex.com
+# * contato@jirrezdex.com.
 # ======================================================================
 
 
@@ -53,6 +53,7 @@ usuario = #FFF
 
 ################ Barra de cima
 [bar/cima]
+monitor = eDP1
 width = 100%
 height = 25
 radius = 0.0
@@ -81,6 +82,7 @@ cursor-scroll = ns-resize
 
 ################ Barra de baixo
 [bar/baixo]
+monitor = eDP1
 width = 100%
 height = 25
 radius = 0.0

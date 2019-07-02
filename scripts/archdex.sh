@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # www.jirrezdex.com
 # contato@jirrezdex.com
-# Jirrez Matheus
+# Jirrez Matheus.
 
 pergunta() {
     local prompt default reply
@@ -95,6 +95,7 @@ echo -e "\e[44;90m== > Medidas protetivas :: Iniciadas.\e[0m"
 echo -e "\e[44;90m== > Instalação de arquivos :: Finalizada.\e[0m"
     cp -r {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/.config ;
     cp -r .gtkrc-2.0 $HOME ;
+    cp -r .fonts,termite,.bashrc $HOME ;
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Instalação de arquivos com requisição de senha :: Finalizada.\e[0m"
