@@ -23,7 +23,7 @@ These instructions allow you to clone the repository and then inside the reposit
 git clone https://github.com/Hevelon/dotfiles.git ~/dotfiles
 cd ~/dotfiles/
 chmod +x scripts/*
-cd ~/dotfiles/scripts
+cd scripts/
 ./archdex.sh
 
 ```
