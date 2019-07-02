@@ -16,7 +16,7 @@ Hello World!!! These are the dotfiles that I use.
 
 ## How to use
 
-You can try it first with a virtualbox
+You can try it first with a virtualbox<br>
 These instructions allow you to clone the repository and then inside the repository execute the commands below:
 
 ```
