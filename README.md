@@ -10,7 +10,11 @@ Hello World!!! These are the dotfiles that I use.
 
 ### Prerequisites
 
-* A working internet connection
+* **A working internet connection**
+* **Font Awesome**
+```trizen -S ttf-font-awesome --noconfirm ```
+* **Font Material Icons**
+```trizen -S ttf-material-icons-git --noconfirm```
 * **Arch Linux Installed** - [Instalattion Guide](https://wiki.archlinux.org/index.php/Installation_guide)
 * **i3wm Installed** - [Instalattion Guide](https://wiki.archlinux.org/index.php/I3)
 
