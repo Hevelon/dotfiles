@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # www.jirrezdex.com
 # contato@jirrezdex.com
-# Jirrez Matheus.
+# Jirrez Matheus
 
 pergunta() {
     local prompt default reply
