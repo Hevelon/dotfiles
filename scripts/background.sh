@@ -9,7 +9,7 @@ HORA=$(date "+%k")
         feh --bg-tile $HOME/.config/background/Noite.png ;
         #feh --bg-scale $HOME/.config/background/Noite.png ;
     elif ((HORA >= 6 )); then
-        feh --bg-tile $HOME/.config/background/Dia.png ;
+        feh --bg-tile $HOME/.config/background/Dia.jpg ;
     else
         feh --bg-tile $HOME/.config/background/Noite.png ;
 fi 
