@@ -180,6 +180,7 @@ exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
 exec_always --no-startup-id compton -b
 exec_always --no-startup-id dunst &
 exec_always --no-startup-id xrandr --output HDMI1 --right-of eDP1 --auto
+#exec_always --no-startup-id xrandr --output HDMI1 --right-of eDP1 --auto
 
 ################ Wallpaper interativo de acordo com a hora do dia
 exec_always --no-startup-id $HOME/.config/scripts/background.sh

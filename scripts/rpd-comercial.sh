@@ -29,7 +29,7 @@ read resposta
 if [ $resposta == 1 ];
 then
 
-	 rdesktop 192.168.1.103 -g 1366x768 -PKD -u Halisson -r disk:Documents=/home/halisson/Pasta\ remota
+	 rdesktop 192.168.1.103:33898 -g 1366x768 -PKD -u Halisson -r disk:Documents=/home/halisson/Pasta\ remota
 
 elif [ $resposta == 2 ]
 then
