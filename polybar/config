@@ -67,10 +67,13 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Fira Sans:size=10:antialias=true;0;0
-font-1 = feather:pixelsize=10
-font-2 = FontAwesome:size=10;0
-font-3 = Siji:pixelsize=10;1
+font-1 = FontAwesome:size=10;0
+font-2 = feather:pixelsize=10
+font-3 = siji:pixelsize=10;1
 font-4 = MaterialIcons:size=10;0
+font-5 = FontAwesome5:size=10;0
+font-6 = Material Design Icons:size=10;0
+
 
 
 
@@ -100,6 +103,8 @@ font-1 = feather:pixelsize=10
 font-2 = Fira Mono:size=8;-1
 font-3 = MaterialIcons:size=10;0
 font-4 = FontAwesome:size=10;0
+font-5 = FontAwesome5:size=10;0
+font-6 = Material Design Icons:size=10;0
 
 modules-left = som spotify
 modules-center = janela
@@ -325,21 +330,21 @@ animation-packetloss-framerate = 500
 ################ Menu
 [module/menu]
 type = custom/text
-content = 
+content = 
 content-foreground = ${cores.menu}
 click-left = $HOME/.config/scripts/menu.sh &
 
-################ Preparar
+################ Preparar/GitHub
 [module/preparar]
 type = custom/text
 content = 
 content-foreground = ${cores.preparar}
 click-left = termite -e $HOME/.config/scripts/preparar.sh &
 
-################ Versão
+################ Versão/Instalador
 [module/versão]
 type = custom/text
-content = 
+content = 
 content-foreground = ${cores.archdex}
 click-left = termite -e $HOME/.config/scripts/archdex.sh &
 
@@ -361,7 +366,7 @@ click-left = playerctl previous
 ################ Controlador play & pause
 [module/tocar-parar]
 type = custom/text
-content = 
+content =  
 content-foreground = ${cores.tocar-parar}
 click-left = playerctl play-pause
 
