@@ -13,7 +13,7 @@ Hello World!!! These are the dotfiles that I use.
 
 * **A working internet connection**
 * **Font Awesome**
-```trizen -S ttf-font-awesome --noconfirm ```
+```trizen -S ttf-font-awesome-4 --noconfirm ```
 * **Font Material Icons**
 ```trizen -S ttf-material-icons-git --noconfirm```
 * **Arch Linux Installed** - [Instalattion Guide](https://wiki.archlinux.org/index.php/Installation_guide)
