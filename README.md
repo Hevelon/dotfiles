@@ -32,3 +32,6 @@ cd scripts/
 ./archdex.sh
 
 ```
+<p align="center">
+<img src="https://i.ibb.co/VWHc9sc/Screenshot-07-10-58-08-07-2019.png" alt="Screenshot-07-10-58-08-07-2019"/>
+</p>
