@@ -16,34 +16,46 @@
 #		-k para o teclado: pt-br ou en-us
 #		-r redirecionamento de pasta
 #		-z = ativar compressão rdp
-
+# 		https://linux.die.net/man/1/rdesktop
 #Para mais parâmetros
 
 # 		man rdesktop
 
-echo "Digite (1) Comercial (2) João Nunes (3) ServerPDV (4) ServerERP: "
+echo "Digite (1) Local (2) Remoto: "
 
-read resposta 
+read resposta
 
+if [ $resposta == 1 ]; then
+	echo "Digite (1) Comercial (2) João Nunes (3) ServerPDV (4) ServerERP: "
+	read escolha
+	if [ $escolha == 1 ]; then
+		rdesktop 192.168.1.103:33898 -g 1366x768 -PKD -k pt-br -5 -u Halisson -k pt-br -p Team152014 -r disk:Documents=/home/halisson/Pasta\ remota
 
-if [ $resposta == 1 ];
-then
+	elif [ $escolha == 2 ]; then
+		rdesktop joaonunes.ddns.net -g 1366x768 -PKD -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
 
-	 rdesktop 192.168.1.103:33898 -g 1366x768 -PKD -u Halisson -r disk:Documents=/home/halisson/Pasta\ remota
+	elif [ $escolha == 3 ]; then
+		rdesktop 192.168.1.103:33898 -g 1366x768 -PKD -u Administrador -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+	elif [ $escolha == 4 ]; then
+		rdesktop 192.168.1.118:3300 -g 1366x768 -PKD -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+	else
+		echo "O valor fornecido é inválido!"
+	fi
 
-elif [ $resposta == 2 ]
-then
+elif [ $resposta == 2 ]; then
 
-	 rdesktop joaonunes.ddns.net -g 1366x768 -PKD -u Administrator -r disk:Documents=/home/halisson/Pasta\ remota
+	echo "Digite (1) Comercial (2) João Nunes: "
 
-elif [ $resposta == 3 ]
-then
-	rdesktop 192.168.1.103 -g 1366x768 -PKD -u Administrador -r disk:Documents=/home/halisson/Pasta\ remota
+	read escolha2
+	if [ $escolha2 == 1 ]; then
+		rdesktop antonioleno.ddns.net:33898 -g 1366x768 -PKD -u Halisson -k pt-br -p Team152014 -r disk:Documents=/home/halisson/Pasta\ remota
 
-elif [ $resposta == 4 ]
-then
-    rdesktop 192.168.1.118 -g 1366x768 -PKD -u Administrator -r disk:Documents=/home/halisson/Pasta\ remota
+	elif [ $escolha2 == 2 ]; then
+		rdesktop joaonunes.ddns.net -g 1366x768 -PKD -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+	else
+		echo "O valor fornecido é inválido!"
+	fi
 
 else
-    echo "O valor fornecido é inválido!"
+	echo "O valor fornecido é inválido!"
 fi

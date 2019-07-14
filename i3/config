@@ -149,13 +149,13 @@ for_window [class="Google-chrome" title="Save File"] floating enable
 for_window [class="Termite"] border pixel 4
 for_window [class="Spotify"] move to workspace $WS6
 assign [class="(Termite)"] $ws1
-assign [class="(Google-chrome|Chromium|TorLauncher|Navigator|Tor Browser)"] $ws2
+assign [class="(Google-chrome|Chromium|Firefox|TorLauncher|Navigator|Tor Browser)"] $ws2
 assign [class="(Code|Eclipse)"] $ws3
 assign [class="(Thunar)"] $ws4
 assign [class="(Telegram)"] $ws5
 assign [class="(MPlayer|Spotify|feh)"] $ws6
 assign [class="(LibreOffice|libreoffice|libreoffice-startcenter|Soffice)"] $ws7
-assign [class="(Gimp|Blender|Inkscape|Rawtherapee)"] $ws8
+assign [class="(Gimp|Blender|Inkscape|Rawtherapee|rdesktop)"] $ws8
 assign [class="(Steam|StardewValley.bin.x86_64|Thunderbird)"] $ws9
 assign [class="()"] $ws10
 
