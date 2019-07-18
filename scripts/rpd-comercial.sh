@@ -44,7 +44,7 @@ if [ $resposta == 1 ]; then
 
 elif [ $resposta == 2 ]; then
 
-	echo "Digite (1) Comercial (2) João Nunes: "
+	echo "Digite (1)Comercial (2)João Nunes (3)ServidorERP: "
 
 	read escolha2
 	if [ $escolha2 == 1 ]; then
@@ -52,6 +52,10 @@ elif [ $resposta == 2 ]; then
 
 	elif [ $escolha2 == 2 ]; then
 		rdesktop joaonunes.ddns.net -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+
+	elif [ $escolha2 == 3 ]; then
+		rdesktop antonioleno.ddns.net:3300 -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+
 	else
 		echo "O valor fornecido é inválido!"
 	fi
