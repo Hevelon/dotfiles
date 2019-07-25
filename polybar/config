@@ -5,12 +5,6 @@
 # * Author: Halisson Hevelon *
 # * E-Mail: halisson.hevelon@gmail.com *
 # *********************************************
-# ======================================================================
-# * Adaptado do original de Jirrez Matheus
-# * URL: www.jirrezdex.com
-# * contato@jirrezdex.com
-# ======================================================================
-
 
 ;=======================================================================
 ;
@@ -40,7 +34,8 @@ arquivos = #FFF
 selecionado = #0489B1
 atencao = #FF3030
 
-menu = #630505
+menu = #FFF
+shutdown = #ff0000
 preparar = #708090
 archdex = #808000
 spotify = #1DB954
@@ -75,7 +70,7 @@ font-4 = MaterialIcons:size=10;0
 
 modules-left = menu versão preparar screencast screenshot
 modules-center = i3
-modules-right = wireless teclado temperatura bateria hora data
+modules-right = wireless   bateria  data desligar
 cursor-click = pointer
 cursor-scroll = ns-resize
 
@@ -98,11 +93,13 @@ font-0 = Fira Sans:size=10:antialias=true;0;0
 font-1 = feather:pixelsize=10
 font-2 = Fira Mono:size=8;-1
 font-3 = MaterialIcons:size=10;0
-font-4 = FontAwesome:size=10;0
+font-4 = Font Awesome 5 Free:size=10:antialias=true:style=Solid
+font-5 = FontAwesome:pixelsize=12
+
 
 modules-left = som spotify
 modules-center = janela
-modules-right = voltar tocar-parar avancar arquivos memoria cpu usuario
+modules-right = voltar tocar-parar avancar arquivos memoria cpu temperatura usuario
 cursor-click = pointer
 cursor-scroll = ns-resize
 
@@ -136,7 +133,7 @@ label-indicator-foreground = #00FF00
 type = internal/fs
 interval = 25
 mount-0 = /
-label-mounted =  %mountpoint%: %percentage_used%%
+label-mounted =  %mountpoint%: %percentage_used%%
 label-mounted-foreground = ${cores.arquivos}
 label-unmounted = %mountpoint% Não montado
 label-unmounted-foreground = ${cores.arquivos}
@@ -178,7 +175,7 @@ label-urgent-foreground = ${cores.atencao}
 type = internal/cpu
 interval = 0.5
 format = <label> <ramp-coreload>
-label = 
+label = 
 
 ramp-coreload-0 = ▁ 
 ramp-coreload-0-font = 2
@@ -210,24 +207,15 @@ ramp-coreload-7-foreground = #ff5555
 type = internal/memory
 interval = 0.2
 format = <label>
-label =  %percentage_used%%
-
-
-################ Hora
-[module/hora]
-type = internal/date
-interval = 1
-time = %H:%M
-format =  <label>
-label = %time%
+label =  %percentage_used%%
 
 
 ################ Data
 [module/data]
 type = internal/date
 interval = 1
-date = %d/%m
-format =  <label>
+date = %a %d/%m %H:%M
+;format =  <label>
 label = %date%
 
 
@@ -321,12 +309,19 @@ animation-packetloss-1 = 
 animation-packetloss-1-foreground = ${bar/top.foreground}
 animation-packetloss-framerate = 500
 
-################ Menu #FontAwesome
+################ Menu
 [module/menu]
 type = custom/text
-content =  
+content = "  "
 content-foreground = ${cores.menu}
 click-left = $HOME/.config/scripts/menu.sh &
+
+################ Shutdown
+[module/desligar]
+type = custom/text
+content = "   "
+content-foreground = ${cores.shutdown}
+click-left =  $HOME/.config/scripts/controle.sh &
 
 ################ Preparar/GitHub
 [module/preparar]

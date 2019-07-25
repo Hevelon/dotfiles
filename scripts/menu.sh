@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# www.jirrezdex.com
-# contato@jirrezdex.com
-# Jirrez Matheus
+
 
 res=$(echo "-Atualizar;-Background;-Controle" | rofi -sep ";" -dmenu -p "Arch Dex" -bw 0 -lines 3 -separator-style none -location 0 -width 16 -hide-scrollbar -padding 5)
 if [ ! -z $res ]; then
