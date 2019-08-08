@@ -179,6 +179,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   alias freemem='sudo /sbin/sysctl -w vm.drop_caches=3'
   alias enter_matrix='echo -e "\e[32m"; while :; do for i in {1..16}; do r="$(($RANDOM % 2))"; if [[ $(($RANDOM % 5)) == 1 ]]; then if [[ $(($RANDOM % 4)) == 1 ]]; then v+="\e[1m $r   "; else v+="\e[2m $r   "; fi; else v+="     "; fi; done; echo -e "$v"; v=""; done'
   alias remoto='.config/scripts/rpd-comercial.sh'
+  alias packages='pacman -Qe | wc -l'
   # GIT_OR_HUB {{{
     if which hub &>/dev/null; then
       alias git=hub

@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# www.jirrezdex.com
-# contato@jirrezdex.com
-# Jirrez Matheus
 
 pergunta() {
     local prompt default reply
@@ -32,7 +29,7 @@ echo -e "\e[44;90m== > Olá "$USER". Iniciando instalação da última versão!\
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Instalando pacotes essenciais.\e[0m"
-    sudo pacman -S --needed alsa-utils arc-gtk-theme arc-icon-theme compton dunst feh gtk-engine-murrine gtk-engines gvfs i3-gaps maim mplayer networkmanager notify-osd playerctl pulseaudio pulseaudio-alsa rofi slim termite thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman ttf-dejavu tumbler xorg-server xorg-xinit xorg-xprop xorg-xrandr ttf-fira-sans ttf-fira-mono expac git jshon wget libcurl-gnutls ffmpeg file-roller ;
+    sudo pacman -S --needed alsa-utils arc-gtk-theme arc-icon-theme compton dunst feh gtk-engine-murrine gtk-engines gvfs i3-gaps maim mplayer networkmanager notify-osd playerctl pulseaudio pulseaudio-alsa rofi slim termite thunar xterm gucharmap rdesktop thunar-archive-plugin thunar-media-tags-plugin thunar-volman ttf-dejavu tumbler xorg-server xorg-xinit xorg-xprop xorg-xrandr ttf-fira-sans ttf-fira-mono expac git jshon wget libcurl-gnutls ffmpeg file-roller ;
     echo "< ================================================================= >";
 
 if pergunta "== > INSTALAR TRIZEN? CASO NÃO O TENHA ISTALADO, INSTALE!" S; then
@@ -52,8 +49,8 @@ echo -e "\e[44;90m== > Instalando pacotes essenciais com o TRIZEN.\e[0m"
     echo "< ================================================================= >";
 
 if pergunta "== > INSTALAR PACOTES OPCIONAIS? ESTES PACOTES TRARÃO ALGUMAS FERRAMENTAS ADICIONAIS." S; then
-    sudo pacman -S --needed blender gimp inkscape rawtherapee mplayer steam thunderbird libreoffice-fresh libreoffice-fresh-pt-br leafpad pavucontrol neofetch ;
-    trizen -S --needed visual-studio-code-bin spotify-stable telegram-desktop cava gtop --noconfirm ;
+    sudo pacman -S --needed  inkscape rawtherapee mplayer thunderbird libreoffice-fresh leafpad pavucontrol neofetch ;
+    trizen -S --needed visual-studio-code-bin spotify-stable telegram-desktop cava gtop ttf-font-awesome-4 ttf-font-awesome ttf-material-icons-git --noconfirm ;
     echo "< ================================================================= >";
 fi
 
@@ -90,12 +87,14 @@ echo -e "\e[44;90m== > Permissão para scripts :: Fornecidas.\e[0m"
 echo -e "\e[44;90m== > Medidas protetivas :: Iniciadas.\e[0m"
     rm -dR $HOME/.config/{background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} ;
     rm -dR $HOME/.gtkrc-2.0 ;
+    rm $HOME/.xinitrc
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Instalação de arquivos :: Finalizada.\e[0m"
     cp -r {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/.config ;
     cp -r .gtkrc-2.0 $HOME ;
-    cp -r .fonts,termite,.bashrc $HOME ;
+    cp -r .fonts,termite,.bashrc,.xinitrc $HOME/ ;
+    sudo cp -r 10-monitor.conf /etc/X11/xorg.conf.d/ ;
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Instalação de arquivos com requisição de senha :: Finalizada.\e[0m"

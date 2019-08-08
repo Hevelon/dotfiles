@@ -26,39 +26,50 @@ echo "Digite (1) Local (2) Remoto: "
 read resposta
 
 if [ $resposta == 1 ]; then
-	echo "Digite (1) Comercial (2) João Nunes (3) ServerPDV (4) ServerERP: "
+	echo "Digite (C) Comercial ALP (J) João Nunes (P) ServerPDV (E) ServerERP: "
 	read escolha
-	if [ $escolha == 1 ]; then
+
+	case "$escolha" in
+	c | C | "")
 		rdesktop 192.168.1.103:33898 -a 16 -z -g 1366x768 -PKD -5 -u Halisson -k pt-br -p Team152014 -r disk:Documents=/home/halisson/Pasta\ remota
-
-	elif [ $escolha == 2 ]; then
+		;;
+	j | J)
 		rdesktop joaonunes.ddns.net -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
-
-	elif [ $escolha == 3 ]; then
+		;;
+	p | P)
 		rdesktop 192.168.1.103:33898 -a 16 -z -g 1366x768 -PKD -5 -u Administrador -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
-	elif [ $escolha == 4 ]; then
+		;;
+	e | E)
 		rdesktop 192.168.1.118:3300 -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
-	else
-		echo "O valor fornecido é inválido!"
-	fi
+		;;
+	*)
+		echo "Opção inválida"
+		;;
+	esac
 
 elif [ $resposta == 2 ]; then
 
-	echo "Digite (1)Comercial (2)João Nunes (3)ServidorERP: "
+	echo "Digite (C) Comercial ALP (J) João Nunes (E) ServidorERP: "
 
-	read escolha2
-	if [ $escolha2 == 1 ]; then
+	read escolha
+
+	case "$escolha" in
+	c | C | "")
 		rdesktop antonioleno.ddns.net:33898 -a 16 -z -g 1366x768 -PKD -5 -u Halisson -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+		;;
 
-	elif [ $escolha2 == 2 ]; then
+	j | J | "")
 		rdesktop joaonunes.ddns.net -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+		;;
 
-	elif [ $escolha2 == 3 ]; then
+	e | E | "")
 		rdesktop antonioleno.ddns.net:3300 -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+		;;
 
-	else
-		echo "O valor fornecido é inválido!"
-	fi
+	*)
+		echo "Opção inválida"
+		;;
+	esac
 
 else
 	echo "O valor fornecido é inválido!"
