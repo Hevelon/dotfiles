@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# www.jirrezdex.com
-# contato@jirrezdex.com
-# Jirrez Matheus
+
 
 pergunta() {
     local prompt default reply
@@ -42,6 +40,7 @@ echo -e "\e[44;90m== > Arquivos :: Copiados.\e[0m"
     cp $HOME/.bashrc $HOME/dotfiles ;
     cp -r $HOME/.config/{background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/dotfiles ;
     sudo cp -r /etc/xdg/termite $HOME/dotfiles ;
+    sudo cp -r /etc/X11/xorg.conf.d/10-monitor.conf $HOME/dotfiles ;
 
 echo -e "\e[44;90m== > Preparação :: Concluída.\e[0m"
     notify-send "Preparação concluída" ;
