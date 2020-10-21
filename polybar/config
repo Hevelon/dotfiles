@@ -321,14 +321,14 @@ click-left = $HOME/.config/scripts/menu.sh &
 type = custom/text
 content = "   "
 content-foreground = ${cores.shutdown}
-click-left =  $HOME/.config/scripts/controle.sh &
+click-left = terminator -e $HOME/.config/scripts/controle.sh &
 
 ################ Preparar/GitHub
 [module/preparar]
 type = custom/text
 content = 
 content-foreground = ${cores.preparar}
-click-left = termite -e $HOME/.config/scripts/preparar.sh &
+click-left = terminator -e $HOME/.config/scripts/preparar.sh &
 
 ################ Versão/Instalador
 [module/versão]

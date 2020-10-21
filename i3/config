@@ -1,8 +1,3 @@
-
-# www.jirrezdex.com
-# contato@jirrezdex.com
-# Jirrez Matheus
-
 ################ Básico
 set $mod Mod4
 
@@ -175,7 +170,7 @@ bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
 ################ Inicialização
-exec_always --no-startup-id $HOME/.config/scripts/pessoal.sh
+#exec_always --no-startup-id $HOME/.config/scripts/pessoal.sh
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
 #exec_always --no-startup-id compton -b
 exec_always --no-startup-id compton &
