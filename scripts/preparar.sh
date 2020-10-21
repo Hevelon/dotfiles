@@ -37,7 +37,8 @@ echo -e "\e[44;90m== > Medidas protetivas :: Iniciadas.\e[0m"
     sudo rm -dR {i3,polybar,dunst,terminator,rofi,scripts,compton,background,sons} ;
 
 echo -e "\e[44;90m== > Arquivos :: Copiados.\e[0m"
-    cp -r $HOME/.bashrc fonts/ .p10k.zsh .xinitrc .zshrc $HOME/dotfiles ;
+    cd $HOME/ ;
+    cp -r .bashrc .fonts/ .xinitrc .zshrc $HOME/dotfiles ;
     cp -r $HOME/.config/{i3,polybar,dunst,terminator,rofi,scripts,compton,background,sons} $HOME/dotfiles ;
 #   sudo cp -r /etc/xdg/termite $HOME/dotfiles ;
     sudo cp -r /etc/X11/ $HOME/dotfiles ;
