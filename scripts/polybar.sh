@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# www.jirrezdex.com
-# contato@jirrezdex.com
-# Jirrez Matheus
 
-####################### Finaliza todas as Polybares
 killall -q polybar
 
-####################### Espera todos os processos finalizarem
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-####################### Iniciar barra de cima e de baixo
-polybar cima &
-polybar baixo &
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar --reload up &
+    MONITOR=$m polybar --reload down &
+  done
+else
+  polybar --reload up &
+  polybar --reload down &
+fi
