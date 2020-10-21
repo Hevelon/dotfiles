@@ -48,9 +48,9 @@ echo -e "\e[44;90m== > Preparação :: Concluída.\e[0m"
 
 if pergunta "== > Fazer upload para o gitHub?" S; then
     cd $HOME/dotfiles ;
-    git add --all ;
-    git commit ;
-    git push -u origin master ;
+    git add * ;
+    git commit -m "update" ;
+    git push;
     notify-send "Arquivos upados" ;
 fi
 
