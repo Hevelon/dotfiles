@@ -29,7 +29,7 @@ echo -e "\e[44;90m== > Olá "$USER". Iniciando instalação da última versão!\
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Instalando pacotes essenciais.\e[0m"
-    sudo pacman -S --needed alsa-utils arc-gtk-theme arc-icon-theme compton dunst feh gtk-engine-murrine gtk-engines gvfs i3-gaps maim mplayer networkmanager notify-osd playerctl pulseaudio pulseaudio-alsa rofi slim termite thunar xterm gucharmap rdesktop thunar-archive-plugin thunar-media-tags-plugin thunar-volman ttf-dejavu tumbler xorg-server xorg-xinit xorg-xprop xorg-xrandr ttf-fira-sans ttf-fira-mono expac git jshon wget libcurl-gnutls ffmpeg file-roller ;
+    sudo pacman -S --needed feh i3-gaps maim thunar-archive-plugin thunar-media-tags-plugin thunar-volman ttf-dejavu tumbler ttf-fira-sans ttf-fira-mono expac jshon wget libcurl-gnutls ffmpeg file-roller gvfs gvfs-afc  gvfs-gphoto2 gvfs-mtp gvfs-smb ;
     echo "< ================================================================= >";
 
 if pergunta "== > INSTALAR TRIZEN? CASO NÃO O TENHA ISTALADO, INSTALE!" S; then
@@ -50,7 +50,7 @@ echo -e "\e[44;90m== > Instalando pacotes essenciais com o TRIZEN.\e[0m"
 
 if pergunta "== > INSTALAR PACOTES OPCIONAIS? ESTES PACOTES TRARÃO ALGUMAS FERRAMENTAS ADICIONAIS." S; then
     sudo pacman -S --needed  inkscape rawtherapee mplayer thunderbird libreoffice-fresh leafpad pavucontrol neofetch ;
-    trizen -S --needed visual-studio-code-bin spotify-stable telegram-desktop cava gtop ttf-font-awesome-4 ttf-font-awesome ttf-material-icons-git --noconfirm ;
+    trizen -S --needed visual-studio-code-bin cava gtop ttf-font-awesome-4 ttf-font-awesome --noconfirm ;
     echo "< ================================================================= >";
 fi
 
@@ -70,36 +70,17 @@ echo -e "\e[44;90m== > Criando diretórios básicos :: Iniciado.\e[0m"
     mkdir $HOME/.config/spotifylog ;
     echo "< ================================================================= >";
 
-echo -e "\e[44;90m== > Download :: Iniciado.\e[0m"
-    cd ;
- #   sudo rm -dR dotfiles ;
-    git clone https://github.com/Hevelon/dotfiles.git | exit ;
-    echo "< ================================================================= >";
-
-echo -e "\e[44;90m== > Diretório :: Acessado.\e[0m"
-    cd dotfiles ;
-    echo "< ================================================================= >";
-
-echo -e "\e[44;90m== > Permissão para scripts :: Fornecidas.\e[0m"
-    chmod +x scripts/* ;
-    echo "< ================================================================= >";
-
-echo -e "\e[44;90m== > Medidas protetivas :: Iniciadas.\e[0m"
-    rm -dR $HOME/.config/{background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} ;
-    rm -dR $HOME/.gtkrc-2.0 ;
-    rm $HOME/.xinitrc
-    echo "< ================================================================= >";
-
+########################################################################
 echo -e "\e[44;90m== > Instalação de arquivos :: Finalizada.\e[0m"
-    cp -r {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/.config ;
-    cp -r .gtkrc-2.0 $HOME ;
-    cp -r .fonts,termite,.bashrc,.xinitrc $HOME/ ;
-    sudo cp -r 10-monitor.conf /etc/X11/xorg.conf.d/ ;
+    cp -r /run/media/halisson/HD_Externo/dotfiles/ {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/.config ;
+# cp -r .gtkrc-2.0 $HOME ;
+    cp -r /run/media/halisson/HD_Externo/dotfiles/.fonts,termite,.bashrc,.xinitrc $HOME/ ;
+# sudo cp -r 10-monitor.conf /etc/X11/xorg.conf.d/ ;
     echo "< ================================================================= >";
 
-echo -e "\e[44;90m== > Instalação de arquivos com requisição de senha :: Finalizada.\e[0m"
-    sudo rm -dR /etc/xdg/termite ;
-    sudo cp -r termite /etc/xdg ;
+#echo -e "\e[44;90m== > Instalação de arquivos com requisição de senha :: Finalizada.\e[0m"
+#    sudo rm -dR /etc/xdg/termite ;
+#    sudo cp -r termite /etc/xdg ;
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Instalação de icones :: Finalizada.\e[0m"

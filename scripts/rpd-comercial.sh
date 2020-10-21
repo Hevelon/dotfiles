@@ -31,16 +31,19 @@ if [ $resposta == 1 ]; then
 
 	case "$escolha" in
 	c | C | "")
-		rdesktop 192.168.1.103:33898 -a 16 -z -g 1366x768 -PKD -5 -u Halisson -k pt-br -p Team152014 -r disk:Documents=/home/halisson/Pasta\ remota
+		#rdesktop 192.168.1.103:33898 -a 16 -z -g 1366x768 -PKD -5 -u Halisson -k pt-br -p Team152014 -r disk:Documents=/home/halisson/Pasta\ remota
+		xfreerdp +drives /u:Halisson /p:Team152014 /v:192.168.1.118 /f
 		;;
 	j | J)
 		rdesktop joaonunes.ddns.net -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
 		;;
 	p | P)
-		rdesktop 192.168.1.103:33898 -a 16 -z -g 1366x768 -PKD -5 -u Administrador -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+		#rdesktop 192.168.1.103:33898 -a 16 -z -g 1366x768 -PKD -5 -u Administrador -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+		xfreerdp +drives /u:Administrador /p:Team5004 /v:192.168.1.103:33898 /f
 		;;
 	e | E)
-		rdesktop 192.168.1.118:3300 -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+		#rdesktop 192.168.1.118:3300 -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+		xfreerdp /u:Administrator /v:192.168.1.118 /f
 		;;
 	*)
 		echo "Opção inválida"
@@ -63,7 +66,8 @@ elif [ $resposta == 2 ]; then
 		;;
 
 	e | E | "")
-		rdesktop antonioleno.ddns.net:3300 -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+		#rdesktop antonioleno.ddns.net -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
+		xfreerdp /u:Administrator /v:antonioleno.ddns.net /f
 		;;
 
 	*)

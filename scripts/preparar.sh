@@ -34,13 +34,13 @@ echo -e "\e[44;90m== > Diretório do repositório :: Acessado.\e[0m"
     git pull ;
 
 echo -e "\e[44;90m== > Medidas protetivas :: Iniciadas.\e[0m"
-    sudo rm -dR {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons,termite} ;
+    sudo rm -dR {i3,polybar,dunst,terminator,rofi,scripts,compton,background,sons} ;
 
 echo -e "\e[44;90m== > Arquivos :: Copiados.\e[0m"
-    cp $HOME/.bashrc $HOME/dotfiles ;
-    cp -r $HOME/.config/{background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/dotfiles ;
-    sudo cp -r /etc/xdg/termite $HOME/dotfiles ;
-    sudo cp -r /etc/X11/xorg.conf.d/10-monitor.conf $HOME/dotfiles ;
+    cp -r $HOME/.bashrc fonts/ .p10k.zsh .xinitrc .zshrc $HOME/dotfiles ;
+    cp -r $HOME/.config/{i3,polybar,dunst,terminator,rofi,scripts,compton,background,sons} $HOME/dotfiles ;
+#   sudo cp -r /etc/xdg/termite $HOME/dotfiles ;
+    sudo cp -r /etc/X11/ $HOME/dotfiles ;
 
 echo -e "\e[44;90m== > Preparação :: Concluída.\e[0m"
     notify-send "Preparação concluída" ;

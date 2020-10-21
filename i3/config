@@ -13,10 +13,10 @@ font pango:Fira Sans 8
 floating_modifier $mod
 
 ################ Atalhos de Pacotes
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec terminator
 bindsym $mod+t exec --no-startup-id thunar &
 bindsym $mod+c exec --no-startup-id code &
-bindsym $mod+g exec --no-startup-id google-chrome-stable &
+bindsym $mod+g exec --no-startup-id google-chrome-stable --incognito &
 
 ################ Fechar janela
 bindsym $mod+Shift+q kill
@@ -146,9 +146,9 @@ for_window [window_type="menu"] floating enable
 for_window [window_type="GtkFileChooserDialog"] floating enable
 for_window [window_type="Soffice"] floating enable
 for_window [class="Google-chrome" title="Save File"] floating enable
-for_window [class="Termite"] border pixel 4
+for_window [class="Terminator"] border pixel 4
 for_window [class="Spotify"] move to workspace $WS6
-assign [class="(Termite)"] $ws1
+assign [class="(Terminator)"] $ws1
 assign [class="(Google-chrome|Chromium|Firefox|TorLauncher|Navigator|Tor Browser)"] $ws2
 assign [class="(Code|Eclipse)"] $ws3
 assign [class="(Thunar)"] $ws4
@@ -177,7 +177,8 @@ bindsym XF86MonBrightnessDown exec light -U 5
 ################ Inicialização
 exec_always --no-startup-id $HOME/.config/scripts/pessoal.sh
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
-exec_always --no-startup-id compton -b
+#exec_always --no-startup-id compton -b
+exec_always --no-startup-id compton &
 exec_always --no-startup-id dunst &
 #exec_always --no-startup-id xrandr --output DP1 --right-of eDP1 --auto
 #exec_always --no-startup-id xrandr --output HDMI1 --right-of eDP1 --auto
