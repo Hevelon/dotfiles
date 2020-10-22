@@ -26,7 +26,8 @@
 
 ################ Cores#
 [cores]
-barra = #402f343f
+#barra = #402f343f
+barra = #000
 fonte = #d8d8d8
 janela = #2196FF
 teclado = #
