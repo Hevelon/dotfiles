@@ -177,6 +177,7 @@ exec_always --no-startup-id compton &
 exec_always --no-startup-id dunst &
 #exec_always --no-startup-id xrandr --output DP1 --right-of eDP1 --auto
 #exec_always --no-startup-id xrandr --output HDMI1 --right-of eDP1 --auto
+exec_always --no-startup-id sh -c "rclone --vfs-cache-mode writes mount onedrive: ~/OneDrive"
 
 ################ Wallpaper interativo de acordo com a hora do dia
 exec_always --no-startup-id $HOME/.config/scripts/background.sh
