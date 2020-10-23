@@ -2,7 +2,7 @@
 
 
 <p align="center">
-<img align="center" src="http://efavdb.com/wp-content/uploads/2016/02/dotfiles_header-750x200.png">
+<img align="center" src="https://twilio-cms-prod.s3.amazonaws.com/images/7iwai15WuuZ-1YLS6UzvVdC4vtbpjLMIoG8kABoHmrNLML.width-808.png">
 </p>
  
 # <p>
