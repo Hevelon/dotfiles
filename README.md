@@ -33,5 +33,5 @@ cd scripts/
 
 ```
 <p align="center">
-<img src="https://i.ibb.co/VWHc9sc/Screenshot-07-10-58-08-07-2019.png" alt="Screenshot-07-10-58-08-07-2019"/>
+<img src="https://ibb.co/J2DbRr8" alt="Screenshot"/>
 </p>
