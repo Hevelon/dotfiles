@@ -45,7 +45,7 @@ if pergunta "== > INSTALAR TRIZEN? CASO NÃO O TENHA ISTALADO, INSTALE!" S; then
 fi
 
 echo -e "\e[44;90m== > Instalando pacotes essenciais com o TRIZEN.\e[0m"
-    trizen -S --needed google-chrome light polybar i3lock-fancy-git --noconfirm ;
+    trizen -S --needed light polybar i3lock-fancy-git --noconfirm ;
     echo "< ================================================================= >";
 
 if pergunta "== > INSTALAR PACOTES OPCIONAIS? ESTES PACOTES TRARÃO ALGUMAS FERRAMENTAS ADICIONAIS." S; then
@@ -64,7 +64,7 @@ echo -e "\e[44;90m== > Habilitando o slim.\e[0m"
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Criando diretórios básicos :: Iniciado.\e[0m"
- #   mkdir $HOME/{Documentos,Downloads,Imagens,Modelos,Músicas,Público,Vídeos} ;
+#   mkdir $HOME/{Documentos,Downloads,Imagens,Modelos,Músicas,Público,Vídeos} ;
     mkdir $HOME/Pictures/Screenshots ;
     mkdir $HOME/Videos/Screencasts ;
     mkdir $HOME/.config/spotifylog ;
@@ -72,9 +72,9 @@ echo -e "\e[44;90m== > Criando diretórios básicos :: Iniciado.\e[0m"
 
 ########################################################################
 echo -e "\e[44;90m== > Instalação de arquivos :: Finalizada.\e[0m"
-    cp -r /run/media/halisson/HD_Externo/dotfiles/ {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/.config ;
+    cp -r ~/dotfiles/ {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/.config ;
 # cp -r .gtkrc-2.0 $HOME ;
-    cp -r /run/media/halisson/HD_Externo/dotfiles/.fonts,termite,.bashrc,.xinitrc $HOME/ ;
+    cp -r ~/dotfiles/.fonts,termite,.bashrc,.xinitrc $HOME/ ;
 # sudo cp -r 10-monitor.conf /etc/X11/xorg.conf.d/ ;
     echo "< ================================================================= >";
 
