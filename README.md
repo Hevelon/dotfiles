@@ -33,8 +33,5 @@ cd scripts/
 
 ```
 <p align="center">
-<<<<<<< HEAD
-<img src="/background/Screenshot.png" alt="Screenshot-07-10-58-08-07-2019"/>
-
 <img src="https://i.ibb.co/J2DbRr8/Screenshot-09-03-07-23-10-2020.png" alt="Screenshot"/>
 </p>
