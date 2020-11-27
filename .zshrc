@@ -116,9 +116,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #ALIAS {{{
  	alias freemem='sudo /sbin/sysctl -w vm.drop_caches=3'
-  	alias enter_matrix='echo -e "\e[32m"; while :; do for i in {1..16}; do r="$(($RANDOM % 2))"; if [[ $(($RANDOM % 5)) == 1 ]]; then if [[ $(($RANDOM % 4)) == 1 ]]; then v+="\e[1m $r   "; else v+="\e[2m $r   "; fi; else v+="     "; fi; done; echo -e "$v"; v=""; done'
+  alias enter_matrix='echo -e "\e[32m"; while :; do for i in {1..16}; do r="$(($RANDOM % 2))"; if [[ $(($RANDOM % 5)) == 1 ]]; then if [[ $(($RANDOM % 4)) == 1 ]]; then v+="\e[1m $r   "; else v+="\e[2m $r   "; fi; else v+="     "; fi; done; echo -e "$v"; v=""; done'
 	alias remoto='.config/scripts/rpd-comercial.sh'
-  	alias packages='pacman -Qe | wc -l'
+  alias packages='pacman -Qe | wc -l'
 	alias cpv='rsync -av --progress '
 # PACMAN ALIASES {{{
     # we're on ARCH
@@ -127,19 +127,19 @@ source $ZSH/oh-my-zsh.sh
       if ! $_isroot; then
         alias pacman='sudo pacman'
       fi
-      alias pacupg='pacman -Syu'            # Synchronize with repositories and then upgrade packages that are out of date on the local system.
-      alias pacupd='pacman -Sy'             # Refresh of all package lists after updating /etc/pacman.d/mirrorlist
-      alias pacin='pacman -S'               # Install specific package(s) from the repositories
-      alias pacinu='pacman -U'              # Install specific local package(s)
-      alias pacre='pacman -R'               # Remove the specified package(s), retaining its configuration(s) and required dependencies
-      alias pacun='pacman -Rcsn'            # Remove the specified package(s), its configuration(s) and unneeded dependencies
-      alias pacinfo='pacman -Si'            # Display information about a given package in the repositories
-      alias pacse='pacman -Ss'              # Search for package(s) in the repositories
+      alias pacupg='sudo pacman -Syu'            # Synchronize with repositories and then upgrade packages that are out of date on the local system.
+      alias pacupd='sudo pacman -Sy'             # Refresh of all package lists after updating /etc/pacman.d/mirrorlist
+      alias pacin='sudo pacman -S'               # Install specific package(s) from the repositories
+      alias pacinu='sudo pacman -U'              # Install specific local package(s)
+      alias pacre='sudo pacman -R'               # Remove the specified package(s), retaining its configuration(s) and required dependencies
+      alias pacun='sudo pacman -Rcsn'            # Remove the specified package(s), its configuration(s) and unneeded dependencies
+      alias pacinfo='sudo pacman -Si'            # Display information about a given package in the repositories
+      alias pacse='sudo pacman -Ss'              # Search for package(s) in the repositories
 
-      alias pacupa='pacman -Sy && sudo abs' # Update and refresh the local package and ABS databases against repositories
-      alias pacind='pacman -S --asdeps'     # Install given package(s) as dependencies of another package
-      alias pacclean="pacman -Sc"           # Delete all not currently installed package files
-      alias pacmake="makepkg -fcsi"         # Make package from PKGBUILD file in current directory
+      alias pacupa='sudo pacman -Sy && sudo abs' # Update and refresh the local package and ABS databases against repositories
+      alias pacind='pacman -S --asdeps'          # Install given package(s) as dependencies of another package
+      alias pacclean="sudo pacman -Sc"           # Delete all not currently installed package files
+      alias pacmake="makepkg -fcsi"              # Make package from PKGBUILD file in current directory
     fi
   #}}}
 
