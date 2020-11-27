@@ -77,7 +77,7 @@ echo -e "\e[44;90m== > Instalação de arquivos :: Finalizada.\e[0m"
     cp -r ~/dotfiles/.fonts,termite,.bashrc,.xinitrc $HOME/ ;
 # sudo cp -r 10-monitor.conf /etc/X11/xorg.conf.d/ ;
     echo "< ================================================================= >";
-
+#
 #echo -e "\e[44;90m== > Instalação de arquivos com requisição de senha :: Finalizada.\e[0m"
 #    sudo rm -dR /etc/xdg/termite ;
 #    sudo cp -r termite /etc/xdg ;
