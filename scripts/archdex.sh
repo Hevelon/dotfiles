@@ -29,7 +29,7 @@ echo -e "\e[44;90m== > Olá "$USER". Iniciando instalação da última versão!\
     echo "< ================================================================= >";
 
 echo -e "\e[44;90m== > Instalando pacotes essenciais.\e[0m"
-    sudo pacman -S --needed feh i3-gaps maim thunar-archive-plugin thunar-media-tags-plugin thunar-volman ttf-dejavu tumbler ttf-fira-sans ttf-fira-mono expac jshon wget libcurl-gnutls ffmpeg file-roller gvfs gvfs-afc  gvfs-gphoto2 gvfs-mtp gvfs-smb ;
+    sudo pacman -S --needed feh i3-gaps maim thunar-archive-plugin thunar-media-tags-plugin thunar-volman ttf-dejavu tumbler ttf-fira-sans ttf-fira-mono expac jshon wget libcurl-gnutls ffmpeg file-roller gvfs gvfs-afc  gvfs-gphoto2 gvfs-mtp gvfs-smb lxappearance-gtk3 rclone slim system-config-printer terminator  ;
     echo "< ================================================================= >";
 
 if pergunta "== > INSTALAR TRIZEN? CASO NÃO O TENHA ISTALADO, INSTALE!" S; then
@@ -72,9 +72,9 @@ echo -e "\e[44;90m== > Criando diretórios básicos :: Iniciado.\e[0m"
 
 ########################################################################
 echo -e "\e[44;90m== > Instalação de arquivos :: Finalizada.\e[0m"
-    cp -r ~/dotfiles/ {background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/.config ;
+    cp -r $HOME/dotfiles/{background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/.config ;
 # cp -r .gtkrc-2.0 $HOME ;
-    cp -r ~/dotfiles/.fonts,termite,.bashrc,.xinitrc $HOME/ ;
+    p -r $HOME/dotfiles/.fonts,termite,.bashrc,.xinitrc $HOME/ ;
 # sudo cp -r 10-monitor.conf /etc/X11/xorg.conf.d/ ;
     echo "< ================================================================= >";
 #
