@@ -49,7 +49,7 @@ echo -e "\e[44;90m== > Instalando pacotes essenciais com o TRIZEN.\e[0m"
     echo "< ================================================================= >";
 
 if pergunta "== > INSTALAR PACOTES OPCIONAIS? ESTES PACOTES TRARÃO ALGUMAS FERRAMENTAS ADICIONAIS." S; then
-    sudo pacman -S --needed  inkscape rawtherapee mplayer thunderbird libreoffice-fresh leafpad pavucontrol neofetch ;
+    sudo pacman -S --needed  inkscape rawtherapee mplayer thunderbird libreoffice-fresh leafpad pavucontrol neofetch nitrogens ;
     trizen -S --needed visual-studio-code-bin cava gtop ttf-font-awesome-4 ttf-font-awesome --noconfirm ;
     echo "< ================================================================= >";
 fi
@@ -74,7 +74,7 @@ echo -e "\e[44;90m== > Criando diretórios básicos :: Iniciado.\e[0m"
 echo -e "\e[44;90m== > Instalação de arquivos :: Finalizada.\e[0m"
     cp -r $HOME/dotfiles/{background,compton,dunst,i3,neofetch,polybar,rofi,scripts,sons} $HOME/.config ;
 # cp -r .gtkrc-2.0 $HOME ;
-    p -r $HOME/dotfiles/.fonts,termite,.bashrc,.xinitrc $HOME/ ;
+    cp -r $HOME/dotfiles/.fonts,termite,.bashrc,.xinitrc $HOME/ ;
 # sudo cp -r 10-monitor.conf /etc/X11/xorg.conf.d/ ;
     echo "< ================================================================= >";
 #
