@@ -146,7 +146,7 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-ws-icon-0 = 1;terminal
+ws-icon-0 = 1;terminal
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
@@ -284,7 +284,7 @@ format-warn = <ramp> <label-warn>
 #format-warn-foreground = ${cores.temperatura}
 label = %temperature-c%
 label-warn = %temperature-c%
-ramp-0 = 
+ramp-0 = 
 
 
 ################ Wireless
@@ -296,7 +296,7 @@ ping-interval = 10
 
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
-label-disconnected = 
+label-disconnected =  
 label-disconnected-foreground = #66
 
 ramp-signal-0 = 
@@ -314,7 +314,7 @@ animation-packetloss-framerate = 500
 ################ Menu
 [module/menu]
 type = custom/text
-content = "  "
+content = "  "
 content-foreground = ${cores.menu}
 click-left = $HOME/.config/scripts/menu.sh &
 
@@ -328,7 +328,7 @@ click-left = terminator -e $HOME/.config/scripts/controle.sh &
 ################ Preparar/GitHub
 [module/preparar]
 type = custom/text
-content = 
+content = 
 content-foreground = ${cores.preparar}
 click-left = terminator -e $HOME/.config/scripts/preparar.sh &
 
@@ -350,21 +350,21 @@ exec = $HOME/.config/scripts/spotify.sh
 ################ Controlador voltar
 [module/voltar]
 type = custom/text
-content = 
+content = 
 content-foreground = ${cores.voltar}
 click-left = playerctl previous
 
 ################ Controlador play & pause
 [module/tocar-parar]
 type = custom/text
-content =  
+content = 
 content-foreground = ${cores.tocar-parar}
 click-left = playerctl play-pause
 
 ################ Controlador avançar
 [module/avancar]
 type = custom/text
-content = 
+content = 
 content-foreground = ${cores.avancar}
 click-left = playerctl next
 
