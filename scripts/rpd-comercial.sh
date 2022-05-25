@@ -32,7 +32,7 @@ if [ $resposta == 1 ]; then
 	case "$escolha" in
 	c | C | "")
 		#rdesktop 192.168.1.103:33898 -a 16 -z -g 1366x768 -PKD -5 -u Halisson -k pt-br -p Team152014 -r disk:Documents=/home/halisson/Pasta\ remota
-		xfreerdp +drives /u:Halisson /p:Team152014 /v:192.168.1.118 /f
+		xfreerdp +drives /u:Halisson /p:Team152014 /v:192.168.1.118 +clipboard /f
 		;;
 	j | J)
 		rdesktop joaonunes.ddns.net -a 16 -z -g 1366x768 -PKD -5 -u Administrator -k pt-br -r disk:Documents=/home/halisson/Pasta\ remota
